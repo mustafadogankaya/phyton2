@@ -1,0 +1,10 @@
+services:
+  sample-app:
+    build: .
+    container_name: phyton2-sample
+    volumes:
+      - .:/app
+    environment:
+      - PYTHONPATH=/app
+    # Override default command for interactive development
+    # command: python -c "import sample; print('Sample app loaded successfully')"
